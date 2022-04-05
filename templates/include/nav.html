@@ -1,0 +1,115 @@
+{% load static %}
+{% load i18n %}
+{% load account %}
+{% load menu_tags %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <h4>{% menu_item menu="Главное меню" %}
+            <div style="display: ruby-text-container;">
+                <a href="{% url 'all_categories' %}">Все категории</a>
+                <div id="navbar" class="navbar-collapse collapse" style="float: right; margin-right: 50px;">
+                    <div class="header-top-right">
+                        {# <div class="file">#}
+                            {# <a href="upload.html">Upload</a>#}
+                            {# </div> #}
+
+
+                        <div class="signin">
+                            {% if not user.is_authenticated %}
+                            <a href="/accounts/signup/" class="play-icon">Регистрация</a>
+                            {% endif %}
+                            <!-- pop-up-box -->
+                            <script type="text/javascript"
+                                    src="{% static 'js/modernizr.custom.min.js' %}"></script>
+                            <link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css"
+                                  media="all"/>
+                            <script src="{% static 'js/jquery.magnific-popup.js' %}"
+                                    type="text/javascript"></script>
+                            <!--//pop-up-box -->
+                            <script>
+                                $(document).ready(function () {
+                                    $('.popup-with-zoom-anim').magnificPopup({
+                                        type: 'inline',
+                                        fixedContentPos: false,
+                                        fixedBgPos: true,
+                                        overflowY: 'auto',
+                                        closeBtnInside: true,
+                                        preloader: false,
+                                        midClick: true,
+                                        removalDelay: 300,
+                                        mainClass: 'my-mfp-zoom-in'
+                                    });
+
+                                });
+                            </script>
+                        </div>
+
+
+                        <div class="signin">
+                            {% if not user.is_authenticated %}
+                            <a href="/accounts/login/" class="play-icon">Войти</a>
+                            {% else %}
+                            <a href="/accounts/logout/" class="play-icon">Выйти</a>
+                            {% endif %}
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </h4>
+
+
+        <!--        <div id="navbar" class="navbar-collapse collapse">-->
+        <!--            <div class="header-top-right">-->
+        <!--                {#<div class="file">#}-->
+        <!--                    {# <a href="upload.html">Upload</a>#}-->
+        <!--                    {#</div> #}-->
+
+
+        <!--                <div class="signin">-->
+        <!--                    {% if not user.is_authenticated %}-->
+        <!--                    <a href="/accounts/signup/" class="play-icon">Регистрация</a>-->
+        <!--                    {% endif %}-->
+        <!--                    &lt;!&ndash; pop-up-box &ndash;&gt;-->
+        <!--                    <script type="text/javascript"-->
+        <!--                            src="{% static 'js/modernizr.custom.min.js' %}"></script>-->
+        <!--                    <link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css"-->
+        <!--                          media="all"/>-->
+        <!--                    <script src="{% static 'js/jquery.magnific-popup.js' %}"-->
+        <!--                            type="text/javascript"></script>-->
+        <!--                    &lt;!&ndash;//pop-up-box &ndash;&gt;-->
+        <!--                    <script>-->
+        <!--                        $(document).ready(function () {-->
+        <!--                            $('.popup-with-zoom-anim').magnificPopup({-->
+        <!--                                type: 'inline',-->
+        <!--                                fixedContentPos: false,-->
+        <!--                                fixedBgPos: true,-->
+        <!--                                overflowY: 'auto',-->
+        <!--                                closeBtnInside: true,-->
+        <!--                                preloader: false,-->
+        <!--                                midClick: true,-->
+        <!--                                removalDelay: 300,-->
+        <!--                                mainClass: 'my-mfp-zoom-in'-->
+        <!--                            });-->
+
+        <!--                        });-->
+        <!--                    </script>-->
+        <!--                </div>-->
+
+
+        <!--                <div class="signin">-->
+        <!--                    {% if not user.is_authenticated %}-->
+        <!--                    <a href="/accounts/login/" class="play-icon">Войти</a>-->
+        <!--                    {% else %}-->
+        <!--                    <a href="/accounts/logout/" class="play-icon">Выйти</a>-->
+        <!--                    {% endif %}-->
+        <!--                </div>-->
+        <!--                <div class="clearfix"></div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="clearfix"></div>
+    </div>
+</nav>

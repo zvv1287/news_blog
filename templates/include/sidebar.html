@@ -1,0 +1,61 @@
+{% load static blog_tags page_tags %}
+
+
+<div class="col-sm-3 col-md-2 sidebar" style="top: 150px">
+    <div class="top-navigation">
+        <div class="t-menu">MENU</div>
+        <div class="t-img">
+            <img src="{% static 'images/lines.png' %}" alt=""/>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <a href="{% url 'all_categories' %}" style="color: #0f74a8; font-size: 22px">Категории</a>
+    <div style="color: #0f74a8; font-size: 18px">{% category_list template='base/blog/categories.html'%}</div>
+    <hr>
+    <div>{% page_list %}</div>
+
+
+    <!-- script-for-menu -->
+    <script>
+        $("li a.menu1").click(function () {
+            $("ul.cl-effect-2").slideToggle(300, function () {
+                // Animation complete.
+            });
+        });
+    </script>
+    <!-- script-for-menu -->
+    <script>
+        $("li a.menu").click(function () {
+            $("ul.cl-effect-1").slideToggle(300, function () {
+                // Animation complete.
+            });
+        });
+    </script>
+    </ul>
+
+
+    <!-- script-for-menu -->
+    <script>
+        $(".top-navigation").click(function () {
+            $(".drop-navigation").slideToggle(300, function () {
+                // Animation complete.
+            });
+        });
+    </script>
+    <div class="side-bottom">
+        <div class="side-bottom-icons">
+            <ul class="nav2">
+                <li><a href="#" class="facebook"> </a></li>
+                <li><a href="#" class="facebook twitter"> </a></li>
+                <li><a href="#" class="facebook chrome"> </a></li>
+                <li><a href="#" class="facebook dribbble"> </a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2015 My Play. All Rights Reserved | Design by <a
+                    href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+</div>
+</div>

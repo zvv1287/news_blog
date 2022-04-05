@@ -1,0 +1,7 @@
+
+
+
+<h4 style="color: #0f74a8; font-size: 22px">Страницы созданные в админке</h4>
+{% for page in pages_list %}
+    <p><a style="color: #0f74a8; font-size: 18px" href="{{ page.get_absolute_url }}">{{ page.title }}</a></p>
+{% endfor %}
